@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat';
+            font-size: 22px;
+            color: white;
+            background: #202731;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 80px 20vw;
+        }
+
+        .blue {
+            background: #3c31dd;
+        }
+
+        .red {
+            background: #dd3f31;
+        }
+
+        .pink {
+            background: #ff0066;
+        }
+
+        .dark {
+            background: #0f0f10;
+        }
+
+        .spacer {
+            aspect-ratio: 960/300;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .wave1 {
+            background-image: url('./wave1.svg');
+        }
+
+        .layered_waves1 {
+            background-image: url('./layered_waves1.svg');
+        }
+
+        .layertest {
+            background-image: url('./layertest.svg');
+        }
+
+        .layertest2 {
+            background-image: url('./layered-waves-haikei.svg');
+        }
+
+        .structure {
+            background-image: url('./M16Eagle_Akar_960.jpg');
+            background-size: 130% 130%;
+            background-position: -100px -240px;
+            background-repeat: no-repeat;
+
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+
+
+        .blob-motion {
+            position: absolute;
+            transform: translateY(-130%);
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <section class="dark">
+        <h1>Kai Lehman</h1>
+        <p>Graduate Student at the University Observatory Munich (USM). My research is about making use of the vast
+            amount of data from simulations in cosmology.</p>
+    </section>
+
+
+
+    <div class="spacer wave1"></div>
+
+
+    <section class="pink">
+        <h1>Research</h1>
+    </section>
+    <section class="pink">
+        <h1>Cosmic Voids</h1>
+        <p>Cosmic voids open up a new window to constrain cosmology and test General
+            Relativity (GR). As voids generally represent regions of the Universe of low
+            density, they are particularly sensitive to effects of neutrinos, possible devia-
+            tions from GR and become dark energy dominated at earlier times.
+            Further cosmological tests are possible via redshift-space distortions, the Alcock-
+            Paczy ́nski test or void lensing. Not only do voids as cosmological probes
+            show great potential, but with upcoming surveys such as LSST and EUCLID it
+            will be of utter importance to maximize the information extracted from these
+            missions. Cosmic voids are already “freely” available within this data without
+            the need for any additional observations. This makes their analysis an invaluable
+            cosmological tool, complementary to standard probes like clusters and galaxies.</p>
+        <svg class="blob-motion" 
+             id="visual" 
+             viewBox="0 0 960 300" 
+             width="960" 
+             height="300"
+             xmlns="http://www.w3.org/2000/svg" 
+             xmlns:xlink="http://www.w3.org/1999/xlink" 
+             version="1.1">
+            <g transform="translate(492.8857426002429 134.13067241790665)">
+                <path id="blob1"
+                      d="M81.2 -88C96.8 -65.5 95.3 -32.8 96.6 1.3C97.9 35.4 102 70.7 86.3 102C70.7 133.2 35.4 160.4 4.8 155.5C-25.7 150.7 -51.4 113.9 -74.4 82.6C-97.4 51.4 -117.7 25.7 -122.6 -4.9C-127.6 -35.6 -117.2 -71.2 -94.2 -93.7C-71.2 -116.2 -35.6 -125.6 -1.4 -124.2C32.8 -122.8 65.5 -110.5 81.2 -88"
+                    fill="#8b033a"></path>
+            </g>
+            <g transform="translate(480.54746508452246 149.71291524099288)" 
+               style="visibility: hidden">
+                <path id="blob2"
+                      d="M68 -62.5C91.9 -44.2 117.4 -22.1 128.5 11C139.5 44.2 136.1 88.4 112.2 105.4C88.4 122.4 44.2 112.2 7.5 104.7C-29.2 97.2 -58.5 92.5 -83 75.5C-107.5 58.5 -127.2 29.2 -133.5 -6.2C-139.7 -41.7 -132.4 -83.4 -107.9 -101.8C-83.4 -120.1 -41.7 -115.1 -9.8 -105.2C22.1 -95.4 44.2 -80.9 68 -62.5"
+                      fill="#8b033a"></path>
+            </g>
+        </svg>
+
+        <script>
+            const tween = KUTE.fromTo(
+                '#blob1',
+                { path: '#blob1' },
+                { path: '#blob2' },
+                { repeat: 999, duration: 3000, yoyo: true }
+            )
+
+            tween.start()
+        </script>
+
+    </section>
+    <section class="pink">
+        <h1>Constraining Cosmology with the Sunyaev-Zeldovich effect</h1>
+        <p>The inverse Compton effect enables us to probe the universe via the Sunyaev-Zeldovich effect.</p>
+    </section>
+
+    <div class="spacer layered_waves1"></div>
+
+    <section class="blue">
+        <h1>Using Neural Networks</h1>
+        <p>Cosmology is developing into an increasingly data-driven science. Machine learning and neural networks are pristine tools to extract information from these huge amounts of data. </p>
+    </section>
+
+    <section>
+        <h1>Collaborators</h1>
+        <p>I am currently collaborating on research projects with Prof. Jochen Weller and Dr. Nico Hamaus and...</p>
+    </section>
+
+    <section class="dark">
+        <h1>Impressum</h1>
+        <p>Ducimus explicabo quas amet iste, fuga omnis voluptatibus sequi error non pariatur ratione sed harum nemo
+            consequuntur aperiam delectus qui quidem aut ipsa aliquid placeat repellat laudantium suscipit.
+            Consequuntur, sapiente.</p>
+    </section>
+
+</body>
+
+</html>
